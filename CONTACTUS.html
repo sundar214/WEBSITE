@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="css/CONTACTUS.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+</head>
+<body>
+  <!-- NAVIGATION -->
+  <header class="header">
+    <div class="logo">
+      <img src="images/img1.png" alt="iTech Logo" />
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="ABOUTUS.html">About Us</a></li>
+        <li><a href="TRAINING.html">Training</a></li>
+        <li><a href="CERTIFICATION.html">Certification</a></li>
+        <li><a href="ALLIANCES.html">Alliances</a></li>
+        <li><a href="CAREER.html">Career</a></li>
+        <li><a href="CONTACTUS.html" class="active">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact-container">
+    <div class="contact-left">
+      <h2>Get in Touch</h2>
+      <p>Have questions? Need support? Reach out to us — we’re here to help.</p>
+
+      <form class="contact-form" method="POST" action="#">
+        <label>Your Name</label>
+        <input type="text" name="name" placeholder="Enter your name" required>
+
+        <label>Email Address</label>
+        <input type="email" name="email" placeholder="Enter your email" required>
+
+        <label>Phone Number</label>
+        <input type="tel" name="phone" placeholder="Enter your phone number" required>
+
+        <label>Your Message</label>
+        <textarea name="message" rows="6" placeholder="Type your message here..." required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+    <div class="contact-right">
+      <h2>Contact Information</h2>
+      <p>Visit us, call us, or message us anytime. We are always available to assist you.</p>
+
+      <div class="info-box">
+        <h3>Our Address</h3>
+        <p>
+          #28, 2nd Floor Nisa Complex,<br>
+          Tiruchedur Road, Murugankuruchi, Palai<br>
+          Opp: City Union Bank,<br>
+          Tirunelveli – 627002, Tamil Nadu
+        </p>
+      </div>
+
+      <div class="info-box">
+        <h3>Contact</h3>
+        <p><i class="fa-solid fa-phone"></i> +91-9788-125-125</p>
+        <p><i class="fa-solid fa-envelope"></i> info@itechacademy.in</p>
+      </div>
+
+      <div class="info-box">
+        <h3>Follow Us</h3>
+        <p class="social-links">
+          <a href="https://www.instagram.com/itech._.academy/"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAP SECTION -->
+  <section class="map-section">
+    <h2>Find Us on Map</h2>
+    <p>Locate our academy easily using the map below.</p>
+    <div class="map-box">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3943.631421091515!2d77.7323183!3d8.726504600000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0411f7092807c9%3A0x10d8046f4629d18f!2siTech%20Academy!5e0!3m2!1sen!2sin!4v1764501107078!5m2!1sen!2sin" 
+              width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-item">
+        <h1>iTech Academy</h1>
+        <p>
+          #28, 2nd Floor Nisa Complex,<br>
+          Tiruchedur Road, Murugankuruchi, Palai<br>
+          Opp: City Union Bank, Tirunelveli – 627002<br>
+          Tamil Nadu, India<br>
+          PH: +91-462-4001400, 9159333359<br>
+          Email: info@itechacademy.in
+        </p>
+      </div>
+
+      <div class="footer-item">
+        <h1>Certification</h1>
+        <p>
+          • CEH<br>
+          • RHCE<br>
+          • CCNA Security<br>
+          • CCNP R&S<br>
+          • MCSA 2016<br>
+          • MCSE Cloud Platform<br>
+          • CompTIA+<br>
+          • OCPJP Java SE8<br>
+          • OCA/OCP DBA
+        </p>
+      </div>
+
+      <div class="footer-item">
+        <h1>Our Lanes</h1>
+        <p>
+          • Certifications<br>
+          • Inplant Trainings<br>
+          • Consultancy<br>
+          • Academic Projects<br>
+          • Online Trainings<br>
+          • Corporate Trainings<br>
+          • Career Development
+        </p>
+      </div>
+
+      <div class="footer-item">
+        <h1>Alliances</h1>
+        <img src="images/adobe.svg" alt="Adobe" />
+        <img src="images/ms.png" alt="Microsoft" />
+        <img style="margin-top: 50px;" src="images/citrix.png" alt="Citrix" />
+      </div>
+    </div>
+    <div class="footer-item copyright">
+      <p>All rights are reserved and Copyrighted under iTech © 2002-2025.</p>
+    </div>
+  </footer>
+
+  <script>
+    const sections = document.querySelectorAll("section");
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) e.target.classList.add("visible");
+      });
+    }, { threshold: 0.2 });
+    sections.forEach(sec => observer.observe(sec));
+  </script>
+</body>
+</html>

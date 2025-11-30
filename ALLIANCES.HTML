@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alliances</title>
+  <link rel="stylesheet" href="css/ALLIANCES.css">
+</head>
+
+<body>
+  <!-- NAVIGATION -->
+  <header class="header">
+    <div class="logo">
+      <img src="images/img1.png" alt="iTech Logo">
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="ABOUTUS.html">About Us</a></li>
+        <li><a href="TRAINING.html">Training</a></li>
+        <li><a href="CERTIFICATION.html">Certification</a></li>
+        <li><a href="ALLIANCES.html" class="active" aria-current="page">Alliances</a></li>
+        <li><a href="CAREER.html">Career</a></li>
+        <li><a href="CONTACTUS.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ALLIANCES CONTENT -->
+  <section class="alliances-hero">
+    <h1>Alliances</h1>
+    <p>
+      Strategic alliances play an important role in our endeavor to deliver high-quality training
+      solutions to our clients. Alliances not only demonstrate our commitment to delivering the
+      right quality of training, but also help align the training requirements of participants with
+      the needs of the industry.
+      <br><br>
+      iTech Academy is an Authorized Pearson VUE Testing Centre.
+    </p>
+  </section>
+
+  <section class="alliances-counters">
+    <div class="counter-box">
+      <h2 class="counter" data-target="5000">0</h2>
+      <p>Test centers</p>
+    </div>
+
+    <div class="counter-box">
+      <h2 class="counter" data-target="165">0</h2>
+      <p>Countries</p>
+    </div>
+
+    <div class="counter-box">
+      <h2 class="counter" data-target="20">0</h2>
+      <span class="plus">+</span>
+      <p>Years of Experience</p>
+    </div>
+
+    <div class="counter-box">
+      <h2 class="counter" data-target="250">0</h2>
+      <p>Professional Centers</p>
+    </div>
+  </section>
+
+  <!-- ALLIANCE LOGOS SECTION -->
+  <section class="alliances-logos">
+    <h2>Our Technology Partners</h2>
+    <div class="logo-row">
+      <img src="images/cisco.png" alt="Cisco">
+      <img src="images/ms.png" alt="Microsoft">
+      <img src="images/oracle.png" alt="Oracle">
+      <img src="images/pearson.png" alt="Pearson Vue">
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-item">
+        <h1>iTech Academy</h1>
+        <p>
+          #28, 2nd Floor Nisa Complex,<br>
+          Tiruchedur Road, Murugankuruchi, Palai<br>
+          Opp: City Union Bank, Tirunelveli – 627002<br>
+          Tamil Nadu, India<br>
+          PH: +91-462-4001400, 9159333359<br>
+          Email: info@itechacademy.in
+        </p>
+      </div>
+
+      <div class="footer-item">
+        <h1>Certification</h1>
+        <p>
+          • CEH<br>
+          • RHCE<br>
+          • CCNA Security<br>
+          • CCNP R&S<br>
+          • MCSA 2016<br>
+          • MCSE Cloud Platform<br>
+          • CompTIA+<br>
+          • OCPJP Java SE8<br>
+          • OCA/OCP DBA
+        </p>
+      </div>
+
+      <div class="footer-item">
+        <h1>Our Lanes</h1>
+        <p>
+          • Certifications<br>
+          • Inplant Trainings<br>
+          • Consultancy<br>
+          • Academic Projects<br>
+          • Online Trainings<br>
+          • Corporate Trainings<br>
+          • Career Development
+        </p>
+      </div>
+
+      <div class="footer-item">
+        <h1>Alliances</h1>
+        <img src="images/adobe.svg" alt="Adobe">
+        <img src="images/ms.png" alt="Microsoft">
+        <img style="margin-top: 50px;" src="images/citrix.png" alt="Citrix">
+      </div>
+    </div>
+    <div class="footer-item copyright">
+      <p>All rights are reserved and Copyrighted under iTech © 2002-2025.</p>
+    </div>
+  </footer>
+
+  <!-- COUNTER SCRIPT -->
+  <script>
+    document.querySelectorAll("section").forEach(sec => sec.classList.add("visible"));
+
+    const counters = document.querySelectorAll(".counter");
+    const speed = 30;
+
+    counters.forEach(counter => {
+      const updateCount = () => {
+        const target = +counter.getAttribute("data-target");
+        const count = +counter.innerText;
+        const increment = Math.ceil(target / speed);
+
+        if (count < target) {
+          counter.innerText = count + increment;
+          setTimeout(updateCount, 30);
+        } else {
+          counter.innerText = target;
+        }
+      };
+      updateCount();
+    });
+  </script>
+</body>
+</html>

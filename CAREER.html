@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Career</title>
+  <link rel="stylesheet" href="css/CAREER.css">
+</head>
+<body>
+  <!-- NAVIGATION -->
+  <header class="header">
+    <div class="logo">
+      <img src="images/img1.png" alt="iTech Logo">
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="ABOUTUS.html">About Us</a></li>
+        <li><a href="TRAINING.html">Training</a></li>
+        <li><a href="CERTIFICATION.html">Certification</a></li>
+        <li><a href="ALLIANCES.html">Alliances</a></li>
+        <li><a href="CAREER.html" class="active" aria-current="page">Career</a></li>
+        <li><a href="CONTACTUS.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- CAREER HERO SECTION -->
+  <section class="career-hero">
+    <h1>Build Your Career With iTech Academy</h1>
+    <p>Unlock opportunities in IT, Networking, Cybersecurity, Cloud, Programming and Design with our industry-ready training and placement pathways.</p>
+  </section>
+
+  <!-- CAREER PATHS -->
+  <section class="career-paths">
+    <h2>Career Opportunities</h2>
+    <p>iTech Academy prepares students for high-demand job roles across the IT industry. Our programs open doors to both domestic and international opportunities.</p>
+
+    <div class="career-grid">
+      <div class="career-card">
+        <h3>Network Engineer</h3>
+        <p>Begin your career in networking with CCNA, CCNP and security-focused certifications.</p>
+      </div>
+      <div class="career-card">
+        <h3>System Administrator</h3>
+        <p>Build skills in Windows Server, Linux, virtualization and enterprise system management.</p>
+      </div>
+      <div class="career-card">
+        <h3>Cybersecurity Analyst</h3>
+        <p>Train in CEH, security tools, threat detection and hands-on ethical hacking.</p>
+      </div>
+      <div class="career-card">
+        <h3>Cloud Support Engineer</h3>
+        <p>Develop expertise in cloud technologies, virtualization and server automation.</p>
+      </div>
+      <div class="career-card">
+        <h3>Java Developer</h3>
+        <p>Learn Java SE, frameworks, database skills and industry-level coding practices.</p>
+      </div>
+      <div class="career-card">
+        <h3>IT Support Technician</h3>
+        <p>Gain troubleshooting skills in hardware, software, networks and operating systems.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="why-us">
+    <h1>Why Choose iTech Academy?</h1>
+    <div class="why-grid">
+      <div class="why-item">
+        <h3>Industry Certified Trainers</h3>
+        <p>Instructors with hands-on real-world experience.</p>
+      </div>
+      <div class="why-item">
+        <h3>100% Practical Learning</h3>
+        <p>Lab-oriented training for real skill development.</p>
+      </div>
+      <div class="why-item">
+        <h3>Placement Assistance</h3>
+        <p>Resume building, mock interviews and job support.</p>
+      </div>
+      <div class="why-item">
+        <h3>Global Certifications</h3>
+        <p>Internationally recognized course pathways.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALL TO ACTION -->
+  <section class="career-cta">
+    <h2>Begin Your Career Journey</h2>
+    <p>Start your training, gain industry skills, earn certifications and get placed in top companies.</p>
+    <a href="CONTACTUS.html" class="career-btn">Contact Career Counsellor</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-item">
+        <h1>iTech Academy</h1>
+        <p>
+          #28, 2nd Floor Nisa Complex,<br>
+          Tiruchedur Road, Murugankuruchi, Palai<br>
+          Opp: City Union Bank, Tirunelveli – 627002<br>
+          Tamil Nadu, India<br>
+          PH: +91-462-4001400, 9159333359<br>
+          Email: info@itechacademy.in
+        </p>
+      </div>
+      <div class="footer-item">
+        <h1>Certification</h1>
+        <p>
+          • CEH<br>
+          • RHCE<br>
+          • CCNA Security<br>
+          • CCNP R&S<br>
+          • MCSA 2016<br>
+          • MCSE Cloud Platform<br>
+          • CompTIA+<br>
+          • OCPJP Java SE8<br>
+          • OCA/OCP DBA
+        </p>
+      </div>
+      <div class="footer-item">
+        <h1>Our Lanes</h1>
+        <p>
+          • Certifications<br>
+          • Inplant Trainings<br>
+          • Consultancy<br>
+          • Academic Projects<br>
+          • Online Trainings<br>
+          • Corporate Trainings<br>
+          • Career Development
+        </p>
+      </div>
+      <div class="footer-item">
+        <h1>Alliances</h1>
+        <img src="images/adobe.svg" alt="Adobe">
+        <img src="images/ms.png" alt="Microsoft">
+        <img style="margin-top: 50px;" src="images/citrix.png" alt="Citrix">
+      </div>
+    </div>
+    <div class="footer-item copyright">
+      <p>All rights are reserved and Copyrighted under iTech © 2002-2025.</p>
+    </div>
+  </footer>
+
+  <script>
+    const sections = document.querySelectorAll("section");
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add("visible");
+        }
+      });
+    }, { threshold: 0.2 });
+    sections.forEach(sec => observer.observe(sec));
+  </script>
+</body>
+</html>

@@ -1,0 +1,457 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@400;600&display=swap');
+
+:root {
+  --color-white: #ffffff;
+  --color-white-light: #f8f8f8;
+  --color-white-lighter: #fcfcfc;
+  --color-black-mild: rgba(0, 0, 0, 0.15); /* mild black for shadows */
+  --color-black-light: #2c2c2c;
+  --color-black-lighter: #444444;
+  --color-black-lightest: #666666;
+  --footer-bg: #333333; /* light black for footer background */
+  --font-primary: 'Inter', 'Poppins', 'Roboto', sans-serif;
+  --section-padding: 80px;
+  --transition-speed: 0.3s;
+  --navy: #001f3f;
+
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--color-white-light);
+  color: var(--color-black-light);
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: clamp(1rem, 1vw + 0.5rem, 1.125rem);
+  line-height: 1.6;
+}
+
+/* Section padding and fade-in animation */
+section {
+  padding: var(--section-padding) 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  background-color: var(--color-white);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px var(--color-black-mild);
+  margin-bottom: 40px;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Navbar / Header */
+
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: rgba(255, 102, 102, 0.6); /* mild red with transparency */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 3px 7px rgba(255, 102, 102, 0.3);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  height: 70px;
+  border-bottom: 4px solid rgba(255, 102, 102, 0.7);
+  color: #330000; /* dark red text */
+  font-weight: 600;
+  user-select: none;
+  transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.logo img {
+  height: 42px;
+  width: auto;
+  display: block;
+  filter: none; /* keep original logo colors */
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #330000; /* dark red */
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 6px;
+  transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a:focus {
+  color: #660000;
+ 
+}
+
+.navbar ul li a.active,
+.navbar ul li a[aria-current='page'] {
+  font-weight: 700;
+}
+
+.navbar ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 4px;
+  background: #660000;
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+.navbar ul li a:hover::after,
+.navbar ul li a:focus::after,
+.navbar ul li a.active::after,
+.navbar ul li a[aria-current='page']::after {
+  width: 100%;
+}
+.footer {
+  background-color: var(--footer-bg);
+  color: var(--color-white);
+  padding: 60px 20px;
+  font-size: clamp(0.9rem, 1vw + 0.2rem, 1rem);
+  user-select: none;
+  box-shadow: 0 -4px 12px var(--color-black-mild);
+  border-radius: 12px 12px 0 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-item h1 {
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-size: 1.25rem;
+  color: var(--color-white);
+  text-shadow: 0 0 4px var(--color-black-mild);
+}
+
+.footer-item p {
+  line-height: 1.5;
+  opacity: 0.85;
+  font-weight: 400;
+  margin: 0;
+  color: var(--color-white);
+}
+
+.footer-item p a {
+  color: var(--color-white);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.footer-item p a:hover,
+.footer-item p a:focus {
+  border-color: var(--color-white);
+  text-shadow: 0 0 6px var(--color-black-mild);
+}
+
+.footer-item img {
+  max-width: 80px;
+  margin-right: 16px;
+  vertical-align: middle;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0 0 3px var(--color-black-mild));
+}
+
+.footer-item img:hover,
+.footer-item img:focus {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 6px var(--color-black-mild));
+}
+.footer-item.copyright p {
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--color-white);
+    opacity: 0.85;
+    margin: 0;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-shadow: 0 0 4px var(--color-black-mild);
+    margin-top: 50px;
+}
+
+.footer-item.copyright p a {
+    color: var(--color-white);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+
+/* Alliances Hero Section */
+.alliances-hero {
+  padding: var(--section-padding) 20px;
+  background-color: var(--color-white);
+  border-radius: 7px;
+  box-shadow: 0 3px 5px var(--color-black-mild);
+  margin-bottom: 40px;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.alliances-hero h1 {
+  font-size: clamp(2.5rem, 5vw + 1rem, 3.5rem);
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--navy);
+  text-shadow: 0 0 6px var(--color-black-lighter);
+}
+
+.alliances-hero p {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--color-black-lighter);
+}
+
+/* Counter Section */
+.alliances-counters {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.counter-box {
+  text-align: center;
+  flex: 1 1 200px;
+  background-color: var(--color-white);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px var(--color-black-mild);
+}
+
+.counter {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 10px;
+}
+
+.counter-box p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-black-light);
+}
+
+
+/* Logos Section */
+.alliances-logos h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--navy);
+}
+
+.logo-row {
+  display: flex;
+  justify-content: space-around;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.logo-row img {
+  max-width: 150px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.logo-row img:hover {
+  transform: scale(1.1);
+}
+/* Hover and interactive enhancements for center content only */
+
+/* Alliances Hero Paragraph */
+.alliances-hero p:hover {
+  color: #660000;
+  transition: color 0.3s ease;
+  cursor: default;
+}
+
+/* Counters Box Hover */
+.counter-box:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 8px 20px rgba(204, 51, 51, 0.4),
+    0 0 15px rgba(204, 51, 51, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+/* Counter Number Color Change on Hover */
+.counter-box:hover .counter {
+  color: #cc3300;
+  transition: color 0.3s ease;
+}
+
+/* Counter Description Color Change on Hover */
+.counter-box:hover p {
+  color: #660000;
+  transition: color 0.3s ease;
+}
+
+
+/* Smooth transitions for all hovered elements */
+
+.alliances-hero p,
+.counter-box,
+.counter-box .counter,
+.counter-box p {
+  transition: all 0.3s ease;
+}
+
+/* Fade-in animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ------------------ Media Queries for Alliances Page ------------------ */
+
+/* Tablets and smaller screens */
+@media (max-width: 900px) {
+
+  /* HERO SECTION */
+  .alliances-hero h1 {
+    font-size: 2.5rem;
+  }
+  .alliances-hero p {
+    font-size: 1.1rem;
+  }
+
+  /* COUNTERS */
+  .alliances-counters {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    text-align: center;
+  }
+
+  .counter-box h2 {
+    font-size: 2.2rem;
+  }
+  .counter-box p {
+    font-size: 1rem;
+  }
+
+  /* LOGO GRID */
+  .alliances-logos .logo-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .alliances-logos img {
+    max-width: 120px;
+  }
+
+  /* FOOTER GRID */
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .footer-item h1 {
+    font-size: 1.2rem;
+  }
+
+  .footer-item p {
+    font-size: 0.9rem;
+  }
+
+  .footer-item img {
+    max-width: 60px;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 600px) {
+
+  /* HERO SECTION */
+  .alliances-hero h1 {
+    font-size: 2rem;
+  }
+  .alliances-hero p {
+    font-size: 0.95rem;
+  }
+
+  /* COUNTERS */
+  .alliances-counters {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .counter-box h2 {
+    font-size: 1.8rem;
+  }
+  .counter-box p {
+    font-size: 0.9rem;
+  }
+
+  /* LOGO GRID */
+  .alliances-logos .logo-row {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .alliances-logos img {
+    max-width: 100px;
+  }
+
+  /* FOOTER GRID */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .footer-item h1 {
+    font-size: 1rem;
+  }
+
+  .footer-item p {
+    font-size: 0.85rem;
+  }
+
+  .footer-item img {
+    max-width: 50px;
+  }
+}

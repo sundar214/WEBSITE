@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Training</title>
+  <link rel="stylesheet" href="css/TRAINING.css">
+</head>
+<body>
+  <!-- NAVIGATION -->
+  <header class="header">
+    <div class="logo">
+      <img src="images/img1.png" alt="iTech Logo">
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="ABOUTUS.html">About Us</a></li>
+        <li><a href="TRAINING.html" class="active">Training</a></li>
+        <li><a href="CERTIFICATION.html">Certification</a></li>
+        <li><a href="ALLIANCES.html">Alliances</a></li>
+        <li><a href="CAREER.html">Career</a></li>
+        <li><a href="CONTACTUS.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- TRAINING HERO SECTION -->
+  <section class="training-hero">
+    <h1>Professional Training Programs</h1>
+    <p>
+      Enhance your career with industry-driven training programs designed to help you gain 
+      practical knowledge and real-time hands-on experience.  
+      Our courses are crafted by certified professionals from top MNCs.
+    </p>
+  </section>
+
+  <!-- TRAINING CATEGORIES -->
+  <section class="training-categories">
+    <div class="training-row">
+      <div class="training-card">
+        <div class="training-img"></div>
+        <h2>Software Development</h2>
+        <p>
+          Learn modern programming languages and frameworks with real-time project training.
+        </p>
+        <ul>
+          <li>Java Full Stack Development</li>
+          <li>Python Full Stack Development</li>
+          <li>Machine Learning & AI</li>
+          <li>Mobile App Development</li>
+        </ul>
+      </div>
+
+      <div class="training-card">
+        <div class="training-img"></div>
+        <h2>Networking & Cybersecurity</h2>
+        <p>
+          Get certified skills in securing systems, networks, and cloud infrastructure.
+        </p>
+        <ul>
+          <li>CEH – Ethical Hacking</li>
+          <li>CCNA / CCNP</li>
+          <li>Firewall & Security Admin</li>
+          <li>Cyber Defense Essentials</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="training-row">
+      <div class="training-card">
+        <div class="training-img"></div>
+        <h2>Cloud & DevOps</h2>
+        <p>
+          Master cloud platforms and automation tools with real-world deployment practices.
+        </p>
+        <ul>
+          <li>AWS Cloud Architect</li>
+          <li>Azure Administrator</li>
+          <li>Google Cloud Fundamentals</li>
+          <li>DevOps with Kubernetes</li>
+        </ul>
+      </div>
+
+      <div class="training-card">
+        <div class="training-img"></div>
+        <h2>Creative & Multimedia</h2>
+        <p>
+          Hands-on creative training for students aiming for strong design portfolios.
+        </p>
+        <ul>
+          <li>Graphic Designing</li>
+          <li>UI/UX Designing</li>
+          <li>Video Editing</li>
+          <li>Animation Basics</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALL TO ACTION -->
+  <section class="training-cta">
+    <h2>Need Career Guidance?</h2>
+    <p>Our counselors are ready to help you choose the right learning path.</p>
+    <a href="CONTACTUS.html" class="cta-btn">Contact Us</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-item">
+        <h1>iTech Academy</h1>
+        <p>
+          #28, 2nd Floor Nisa Complex,<br>
+          Tiruchedur Road, Murugankuruchi, Palai<br>
+          Opp: City Union Bank, Tirunelveli – 627002<br>
+          Tamil Nadu, India<br>
+          PH: +91-462-4001400, 9159333359<br>
+          Email: info@itechacademy.in
+        </p>
+      </div>
+
+      <div class="footer-item">
+        <h1>Certification</h1>
+        <p>
+          • CEH<br>• RHCE<br>• CCNA Security<br>• CCNP R&S<br>• MCSA 2016<br>• MCSE Cloud Platform<br>• CompTIA+<br>• OCPJP Java SE8<br>• OCA/OCP DBA
+        </p>
+      </div>
+
+      <div class="footer-item">
+        <h1>Our Lanes</h1>
+        <p>
+          • Certifications<br>• Inplant Trainings<br>• Consultancy<br>• Academic Projects<br>• Online Trainings<br>• Corporate Trainings<br>• Career Development
+        </p>
+      </div>
+
+      <div class="footer-item">
+        <h1>Alliances</h1>
+        <img src="images/adobe.svg" alt="Adobe" />
+        <img src="images/ms.png" alt="Microsoft" />
+        <img style="margin-top:50px;" src="images/citrix.png" alt="Citrix" />
+      </div>
+    </div>
+    <div class="footer-item copyright">
+      <p>All rights are reserved and Copyrighted under iTech © 2002-2025.</p>
+    </div>
+  </footer>
+
+
+  <script>
+    document.querySelectorAll('.training-card h2').forEach((header) => {
+  header.addEventListener('click', () => {
+    const card = header.parentElement;
+    const isActive = card.classList.contains('active');
+
+    // Close any other open cards
+    document.querySelectorAll('.training-card.active').forEach((openCard) => {
+      if (openCard !== card) {
+        openCard.classList.remove('active');
+        openCard.querySelector('ul').style.display = 'none';
+      }
+    });
+
+    if (isActive) {
+      // Close this card
+      card.classList.remove('active');
+      card.querySelector('ul').style.display = 'none';
+    } else {
+      // Open this card and show its list
+      card.classList.add('active');
+      const ul = card.querySelector('ul');
+      ul.style.display = 'flex';
+      // Trigger reflow for animation
+      void ul.offsetWidth;
+      ul.style.opacity = '1';
+      ul.style.pointerEvents = 'auto';
+      ul.style.transform = 'translateY(0)';
+    }
+  });
+});
+    const sections = document.querySelectorAll("section");
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) e.target.classList.add("visible");
+      });
+    }, { threshold: 0.2 });
+    sections.forEach(sec => observer.observe(sec));
+  </script>
+</body>
+</html>

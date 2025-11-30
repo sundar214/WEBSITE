@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us</title>
+  <link rel="stylesheet" href="css/ABOUTUS.css" />
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <!-- NAVIGATION -->
+  <header class="header">
+    <div class="logo">
+      <img src="images/img1.png" alt="iTech Logo" />
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="ABOUTUS.html" class="active" aria-current="page">About Us</a></li>
+        <li><a href="TRAINING.html">Training</a></li>
+        <li><a href="CERTIFICATION.html">Certification</a></li>
+        <li><a href="ALLIANCES.html">Alliances</a></li>
+        <li><a href="CAREER.html">Career</a></li>
+        <li><a href="CONTACTUS.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ABOUT HERO SECTION -->
+  <section class="about-hero">
+    <div class="about-hero-text">
+      <h1><i class="fa-solid fa-bullseye" style="color:#001f4d; margin-right: 12px;"></i>About ITech</h1>
+      <p>
+        iTech Academy is a leading IT training institute dedicated to providing high-quality education and certification programs. We specialize in Networking, Cybersecurity, Programming, Cloud Computing, and more, helping students and professionals achieve global certifications and career growth.
+      </p>
+    </div>
+    <div class="about-hero-icon" aria-hidden="true">
+      <i class="fa-solid fa-road fa-9x" style="color: #001f4d;"></i>
+    </div>
+  </section>
+
+  <!-- OUR MISSION -->
+  <section class="about-section fade-in-left">
+    <div class="about-text">
+      <h2><i class="fa-solid fa-bullhorn" style="color:#001f4d; margin-right: 8px;"></i>Our Mission</h2>
+      <p>
+        To empower individuals with world-class IT skills and certifications, enabling them to excel in competitive global IT careers. We aim to provide hands-on learning and real-world experience through practical training programs.
+      </p>
+    </div>
+    <div class="about-image-icon" aria-hidden="true">
+      <i class="fa-solid fa-people-group fa-7x" style="color: #001f4d;"></i>
+    </div>
+  </section>
+
+  <!-- OUR VISION -->
+  <section class="about-section fade-in-right">
+    <div class="about-text">
+      <h2><i class="fa-solid fa-eye" style="color:#001f4d; margin-right: 8px;"></i>Our Vision</h2>
+      <p>
+        To be recognized as the most trusted IT training and certification institute, fostering industry-ready professionals who are capable of contributing to the global IT ecosystem.
+      </p>
+    </div>
+    <div class="about-image-icon" aria-hidden="true">
+      <i class="fa-solid fa-globe fa-7x" style="color: #001f4d;"></i>
+    </div>
+  </section>
+
+  <!-- OUR APPROACH -->
+  <section class="about-section fade-in-right">
+    <div class="about-text">
+      <h2><i class="fa-solid fa-chalkboard-teacher" style="color:#001f4d; margin-right: 8px;"></i>Our Approach</h2>
+      <p>
+        We follow a structured, hands-on approach to learning that combines theory, practical exercises, and assessments. Our programs are designed to make students confident and industry-ready, bridging the gap between knowledge and employability.
+      </p>
+    </div>
+    <div class="about-image-icon" aria-hidden="true">
+      <i class="fa-solid fa-lightbulb fa-7x" style="color: #001f4d;"></i>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-item">
+        <h1>iTech Academy</h1>
+        <p>
+          #28, 2nd Floor Nisa Complex,<br />
+          Tiruchedur Road, Murugankuruchi, Palai<br />
+          Opp: City Union Bank, Tirunelveli – 627002<br />
+          Tamil Nadu, India<br />
+          PH: +91-462-4001400, 9159333359<br />
+          Email: info@itechacademy.in
+        </p>
+      </div>
+
+      <div class="footer-item">
+        <h1>Certification</h1>
+        <p>
+          • CEH<br />
+          • RHCE<br />
+          • CCNA Security<br />
+          • CCNP R&S<br />
+          • MCSA 2016<br />
+          • MCSE Cloud Platform<br />
+          • CompTIA+<br />
+          • OCPJP Java SE8<br />
+          • OCA/OCP DBA
+        </p>
+      </div>
+
+      <div class="footer-item">
+        <h1>Our Lanes</h1>
+        <p>
+          • Certifications<br />
+          • Inplant Trainings<br />
+          • Consultancy<br />
+          • Academic Projects<br />
+          • Online Trainings<br />
+          • Corporate Trainings<br />
+          • Career Development
+        </p>
+      </div>
+
+      <div class="footer-item">
+        <h1>Alliances</h1>
+        <img src="images/adobe.svg" alt="Adobe" />
+        <img src="images/ms.png" alt="Microsoft" />
+        <img style="margin-top: 50px;" src="images/citrix.png" alt="Citrix" />
+      </div>
+    </div>
+    <div class="footer-item copyright">
+      <p>All rights are reserved and Copyrighted under iTech © 2002-2025.</p>
+    </div>
+  </footer>
+
+  <!-- SCROLL EFFECT -->
+  <script>
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('.header');
+      if (window.scrollY > 10) {
+        header.style.background = 'rgba(255, 102, 102, 0.4)';
+        header.style.boxShadow = '0 4px 12px rgba(255, 102, 102, 0.4)';
+        header.style.borderBottomColor = 'rgba(255, 102, 102, 0.5)';
+      } else {
+        header.style.background = 'rgba(255, 102, 102, 0.6)';
+        header.style.boxShadow = '0 3px 7px rgba(255, 102, 102, 0.3)';
+        header.style.borderBottomColor = 'rgba(255, 102, 102, 0.7)';
+      }
+    });
+  </script>
+</body>
+</html>

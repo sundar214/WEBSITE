@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/HOME.css">
+</head>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const sections = document.querySelectorAll("section");
+
+  sections.forEach(sec => {
+    sec.classList.add("visible");
+  });
+});
+
+window.addEventListener('scroll', () => {
+    const header = document.querySelector('.header');
+    if (window.scrollY > 10) {
+      header.style.background = 'rgba(255, 102, 102, 0.4)';
+      header.style.boxShadow = '0 4px 12px rgba(255, 102, 102, 0.4)';
+      header.style.borderBottomColor = 'rgba(255, 102, 102, 0.5)';
+    } else {
+      header.style.background = 'rgba(255, 102, 102, 0.6)';
+      header.style.boxShadow = '0 3px 7px rgba(255, 102, 102, 0.3)';
+      header.style.borderBottomColor = 'rgba(255, 102, 102, 0.7)';
+    }
+});
+</script>
+
+<body>
+    <!-- NAVIGATION -->
+    <header class="header">
+        <div class="logo">
+            <img src="images/img1.png" alt="iTech Logo">
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="HOME.html">Home</a></li>
+                <li><a href="ABOUTUS.html">About Us</a></li>
+                <li><a href="TRAINING.html">Training</a></li>
+                <li><a href="CERTIFICATION.html">Certification</a></li>
+                <li><a href="ALLIANCES.html">Alliances</a></li>
+                <li><a href="CAREER.html">Career</a></li>
+                <li><a href="CONTACTUS.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- SLIDESHOW -->
+    <div class="slideshow-container">
+        <div class="slide active" style="background-image: url('images/slide.png');"></div>
+        <div class="slide" style="background-image: url('images/slide2.png');"></div>
+        <div class="slide" style="background-image: url('images/slid4.png');"></div>
+        <div class="slide" style="background-image: url('images/slide3.png');"></div>
+        <div class="slide" style="background-image: url('images/slide5.png');"></div>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const slides = document.querySelectorAll('.slide');
+        let currentIndex = 0;
+        const slideInterval = 4000;
+
+        setInterval(() => {
+            slides[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % slides.length;
+            slides[currentIndex].classList.add('active');
+        }, slideInterval);
+    });
+    </script>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Empowering Skills. Building Careers.</h1>
+            <p>Top-rated training & certification programs trusted by thousands of students globally.</p>
+            <a class="hero-btn" href="TRAINING.html">Explore Training</a>
+        </div>
+    </section>
+
+    <!-- HIGHLIGHTS SECTION -->
+    <section class="highlights">
+        <div class="highlight-card">
+            <h2>Training</h2>
+            <p>Premium training programs in Networking, Cybersecurity, Programming, Cloud and more.</p>
+        </div>
+        <div class="highlight-card">
+            <h2>Certification</h2>
+            <p>Get certified in Cisco, Oracle, Microsoft, EC-Council, CompTIA and more.</p>
+        </div>
+        <div class="highlight-card">
+            <h2>Alliances</h2>
+            <p>Authorized Pearson VUE Testing Center with strong industry alliances.</p>
+        </div>
+    </section>
+
+    <!-- CTA BANNER -->
+    <section class="cta-banner">
+        <div>
+            <h1>GET CERTIFIED</h1>
+        </div>
+        <div>
+            <h1>GET HIRED</h1>
+        </div>
+    </section>
+
+    <!-- CERTIFICATION CARDS -->
+    <section class="certifications">
+        <h1>Certification Trainings</h1>
+        <div class="cert-grid">
+            <img src="images/cert1.png" alt="CEH Certification">
+            <img src="images/cert2.jpg" alt="RHCE Certification">
+            <img src="images/cert3.svg" alt="CCNA Security">
+            <img src="images/cert4.png" alt="CCNP Routing and Switching">
+            <img src="images/cert5.jpg" alt="MCSA Certification">
+            <img src="images/cert6.jpg" alt="MCSE Cloud Platform">
+            <img src="images/cert7.jpg" alt="CompTIA Certification">
+            <img src="images/cert8.png" alt="OCPJP Java SE8">
+            <img src="images/cert9.png" alt="OCA/OCP DBA">
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-item">
+                <h1>iTech Academy</h1>
+                <p>
+                    #28, 2nd Floor Nisa Complex,<br>
+                    Tiruchedur Road, Murugankuruchi, Palai<br>
+                    Opp: City Union Bank, Tirunelveli – 627002<br>
+                    Tamil Nadu, India<br>
+                    PH: +91-462-4001400, 9159333359<br>
+                    Email: info@itechacademy.in
+                </p>
+            </div>
+            <div class="footer-item">
+                <h1>Certification</h1>
+                <p>
+                    • CEH<br>
+                    • RHCE<br>
+                    • CCNA Security<br>
+                    • CCNP R&S<br>
+                    • MCSA 2016<br>
+                    • MCSE Cloud Platform<br>
+                    • CompTIA+<br>
+                    • OCPJP Java SE8<br>
+                    • OCA/OCP DBA
+                </p>
+            </div>
+            <div class="footer-item">
+                <h1>Our Lanes</h1>
+                <p>
+                    • Certifications<br>
+                    • Inplant Trainings<br>
+                    • Consultancy<br>
+                    • Academic Projects<br>
+                    • Online Trainings<br>
+                    • Corporate Trainings<br>
+                    • Career Development
+                </p>
+            </div>
+            <div class="footer-item">
+                <h1>Alliances</h1>
+                <img src="images/adobe.svg" alt="Adobe">
+                <img src="images/ms.png" alt="Microsoft">
+                <img style="margin-top: 50px;" src="images/citrix.png" alt="Citrix">
+            </div>
+        </div>
+        <div class="footer-item copyright">
+            <p>All rights are reserved and Copyrighted under iTech © 2002-2025.</p>
+        </div>
+    </footer>
+</body>
+</html>
